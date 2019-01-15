@@ -15,8 +15,8 @@ public class ProjectService {
         this.projectRepository = projectRepository;
     }
 
-    public void saveOrUpdateProject(Project project) {
-        projectRepository.save(project);
+    public Project saveOrUpdateProject(Project project) {
+        return projectRepository.save(project);
     }
 
     public Iterable<Project> getAllProjects() {
