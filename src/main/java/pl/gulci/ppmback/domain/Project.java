@@ -30,11 +30,11 @@ public class Project {
     @NotBlank(message = "Project description is required")
     private String description;
 
-    @NotNull
+    @NotNull(message = "Start date is required")
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date startDate;
 
-    @NotNull
+    @NotNull(message = "End date is required")
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date endDate;
 
