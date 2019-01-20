@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import pl.gulci.ppmback.domain.Project;
 import pl.gulci.ppmback.repositories.ProjectRepository;
 
+import java.util.Collections;
+
 @Service
 public class ProjectService {
 
@@ -21,5 +23,9 @@ public class ProjectService {
 
     public Iterable<Project> getAllProjects() {
         return projectRepository.findAll();
+    }
+
+    public Iterable<Project> getProjectById(Long id) {
+        return projectRepository.findAllById(Collections.singletonList(id));
     }
 }
